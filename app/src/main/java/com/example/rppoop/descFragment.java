@@ -69,6 +69,14 @@ public class descFragment extends Fragment {
         TextView AQues = view.findViewById(R.id.AQues);
         Activity activity = (Activity)container.getContext();
 
+        AQues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity().getBaseContext(), ApiActivity.class);
+                startActivity(i);
+            }
+        });
+
         nameholder.setText(Name);
         avrSalholder.setText(AverageSalary);
         placements.setText(Placements);
@@ -87,15 +95,15 @@ public class descFragment extends Fragment {
         return view;
     }
 
-    public void Api(View view, Context context){
-        TextView nameholder = view.findViewById(R.id.nameholder);
-        TextView AQues = view.findViewById(R.id.AQues);
-        String companyName = nameholder.getText().toString();
-        Activity activity = (Activity)context;
-        Intent intent = new Intent(activity, ApiActivity.class);
-        intent.putExtra("companyName", companyName);
-        startActivity(intent);
-    }
+//    public void Api(View view, Context context){
+//        TextView nameholder = view.findViewById(R.id.nameholder);
+//        TextView AQues = view.findViewById(R.id.AQues);
+//        String companyName = nameholder.getText().toString();
+//        Activity activity = (Activity)context;
+//        Intent intent = new Intent(activity, ApiActivity.class);
+//        intent.putExtra("companyName", companyName);
+//        startActivity(intent);
+//    }
 
 
     public void onBackPressed(){

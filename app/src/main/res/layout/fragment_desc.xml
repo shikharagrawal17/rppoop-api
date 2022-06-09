@@ -120,12 +120,12 @@
             android:background="#009a9a"
             android:gravity="center_horizontal"
             android:letterSpacing="0.2"
+
             android:padding="16dp"
             android:text="Aptitiude Questions"
             android:textColor="#E3F2FD"
             android:textSize="20sp"
-            android:onClick="Api"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"/>
 <!--        <Button-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

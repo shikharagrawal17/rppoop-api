@@ -26,18 +26,18 @@ public class ApiActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private QuestionAdapter questionAdapter;
     private ApiActivityViewModel apiActivityViewModel;
-//    private String companyName = "adobe";
-    private String companyName;
+    private String companyName = "adobe";
+//    private String companyName = ;
     private Button button;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        button = findViewById(R.id.button);
-        Bundle bundle = getIntent().getExtras();
-        String companyName = bundle.getString("companyName");
+        setContentView(R.layout.activity_main_api);
+        button = findViewById(R.id.button2);
+//        Bundle bundle = getIntent().getExtras();
+//        String companyName = bundle.getString("companyName");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,11 +45,8 @@ public class ApiActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
         apiActivityViewModel = new ViewModelProvider(this).get(ApiActivityViewModel.class);
-
         LoadQuestions(companyName);
-
     }
 
     public void LoadQuestions(String companyName){
